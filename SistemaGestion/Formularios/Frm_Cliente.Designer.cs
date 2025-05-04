@@ -30,37 +30,37 @@ namespace SistemaGestion.Formularios
         {
             gestion = new System.Windows.Forms.Panel();
             lblTotalRegistros = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            panel2 = new System.Windows.Forms.Panel();
+            titulo = new System.Windows.Forms.Label();
+            pnl_opciones = new System.Windows.Forms.Panel();
             btnCancelar = new System.Windows.Forms.Button();
             btnEliminar = new System.Windows.Forms.Button();
             btnGuardar = new System.Windows.Forms.Button();
             btnNuevo = new System.Windows.Forms.Button();
-            panel3 = new System.Windows.Forms.Panel();
+            pnl_registros = new System.Windows.Forms.Panel();
             btnUltimo = new System.Windows.Forms.Button();
             btnSiguiente = new System.Windows.Forms.Button();
             btnAnterior = new System.Windows.Forms.Button();
             btnPrimero = new System.Windows.Forms.Button();
             lblPosicion = new System.Windows.Forms.Label();
-            groupBox1 = new System.Windows.Forms.GroupBox();
-            label8 = new System.Windows.Forms.Label();
+            datos_cliente = new System.Windows.Forms.GroupBox();
+            id_cliente = new System.Windows.Forms.Label();
             txtId = new System.Windows.Forms.TextBox();
-            label7 = new System.Windows.Forms.Label();
+            direccion = new System.Windows.Forms.Label();
             txtDireccion = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
+            email = new System.Windows.Forms.Label();
             txtEmail = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
+            telefono = new System.Windows.Forms.Label();
             txtTelefono = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
+            documento = new System.Windows.Forms.Label();
             txtDocumento = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
+            apellido = new System.Windows.Forms.Label();
             txtApellido = new System.Windows.Forms.TextBox();
-            label2 = new System.Windows.Forms.Label();
+            nombre = new System.Windows.Forms.Label();
             txtNombre = new System.Windows.Forms.TextBox();
             gestion.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            groupBox1.SuspendLayout();
+            pnl_opciones.SuspendLayout();
+            pnl_registros.SuspendLayout();
+            datos_cliente.SuspendLayout();
             SuspendLayout();
             // 
             // gestion
@@ -68,7 +68,7 @@ namespace SistemaGestion.Formularios
             gestion.BackColor = System.Drawing.SystemColors.ControlLight;
             gestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             gestion.Controls.Add(lblTotalRegistros);
-            gestion.Controls.Add(label1);
+            gestion.Controls.Add(titulo);
             gestion.Dock = System.Windows.Forms.DockStyle.Top;
             gestion.Location = new System.Drawing.Point(0, 0);
             gestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -87,31 +87,31 @@ namespace SistemaGestion.Formularios
             lblTotalRegistros.TabIndex = 1;
             lblTotalRegistros.Text = "Total: 0 registros";
             // 
-            // label1
+            // titulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(16, 14);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(243, 29);
-            label1.TabIndex = 0;
-            label1.Text = "Gestión de Clientes";
+            titulo.AutoSize = true;
+            titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            titulo.Location = new System.Drawing.Point(16, 14);
+            titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            titulo.Name = "titulo";
+            titulo.Size = new System.Drawing.Size(243, 29);
+            titulo.TabIndex = 0;
+            titulo.Text = "Gestión de Clientes";
             // 
-            // panel2
+            // pnl_opciones
             // 
-            panel2.BackColor = System.Drawing.SystemColors.Control;
-            panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel2.Controls.Add(btnCancelar);
-            panel2.Controls.Add(btnEliminar);
-            panel2.Controls.Add(btnGuardar);
-            panel2.Controls.Add(btnNuevo);
-            panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            panel2.Location = new System.Drawing.Point(912, 91);
-            panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(133, 618);
-            panel2.TabIndex = 1;
+            pnl_opciones.BackColor = System.Drawing.SystemColors.Control;
+            pnl_opciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pnl_opciones.Controls.Add(btnCancelar);
+            pnl_opciones.Controls.Add(btnEliminar);
+            pnl_opciones.Controls.Add(btnGuardar);
+            pnl_opciones.Controls.Add(btnNuevo);
+            pnl_opciones.Dock = System.Windows.Forms.DockStyle.Right;
+            pnl_opciones.Location = new System.Drawing.Point(912, 91);
+            pnl_opciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            pnl_opciones.Name = "pnl_opciones";
+            pnl_opciones.Size = new System.Drawing.Size(133, 618);
+            pnl_opciones.TabIndex = 1;
             // 
             // btnCancelar
             // 
@@ -153,21 +153,21 @@ namespace SistemaGestion.Formularios
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // pnl_registros
             // 
-            panel3.BackColor = System.Drawing.SystemColors.Control;
-            panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel3.Controls.Add(btnUltimo);
-            panel3.Controls.Add(btnSiguiente);
-            panel3.Controls.Add(btnAnterior);
-            panel3.Controls.Add(btnPrimero);
-            panel3.Controls.Add(lblPosicion);
-            panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panel3.Location = new System.Drawing.Point(0, 636);
-            panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(912, 73);
-            panel3.TabIndex = 2;
+            pnl_registros.BackColor = System.Drawing.SystemColors.Control;
+            pnl_registros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            pnl_registros.Controls.Add(btnUltimo);
+            pnl_registros.Controls.Add(btnSiguiente);
+            pnl_registros.Controls.Add(btnAnterior);
+            pnl_registros.Controls.Add(btnPrimero);
+            pnl_registros.Controls.Add(lblPosicion);
+            pnl_registros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            pnl_registros.Location = new System.Drawing.Point(0, 636);
+            pnl_registros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            pnl_registros.Name = "pnl_registros";
+            pnl_registros.Size = new System.Drawing.Size(912, 73);
+            pnl_registros.TabIndex = 2;
             // 
             // btnUltimo
             // 
@@ -224,41 +224,41 @@ namespace SistemaGestion.Formularios
             lblPosicion.TabIndex = 0;
             lblPosicion.Text = "Sin registros.";
             // 
-            // groupBox1
+            // datos_cliente
             // 
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(txtId);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(txtDireccion);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtEmail);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(txtTelefono);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(txtDocumento);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txtApellido);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtNombre);
-            groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            groupBox1.Location = new System.Drawing.Point(0, 91);
-            groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            groupBox1.Size = new System.Drawing.Size(912, 545);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Datos del Cliente";
+            datos_cliente.Controls.Add(id_cliente);
+            datos_cliente.Controls.Add(txtId);
+            datos_cliente.Controls.Add(direccion);
+            datos_cliente.Controls.Add(txtDireccion);
+            datos_cliente.Controls.Add(email);
+            datos_cliente.Controls.Add(txtEmail);
+            datos_cliente.Controls.Add(telefono);
+            datos_cliente.Controls.Add(txtTelefono);
+            datos_cliente.Controls.Add(documento);
+            datos_cliente.Controls.Add(txtDocumento);
+            datos_cliente.Controls.Add(apellido);
+            datos_cliente.Controls.Add(txtApellido);
+            datos_cliente.Controls.Add(nombre);
+            datos_cliente.Controls.Add(txtNombre);
+            datos_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            datos_cliente.Location = new System.Drawing.Point(0, 91);
+            datos_cliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            datos_cliente.Name = "datos_cliente";
+            datos_cliente.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            datos_cliente.Size = new System.Drawing.Size(912, 545);
+            datos_cliente.TabIndex = 3;
+            datos_cliente.TabStop = false;
+            datos_cliente.Text = "Datos del Cliente";
             // 
-            // label8
+            // id_cliente
             // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(17, 40);
-            label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(22, 20);
-            label8.TabIndex = 13;
-            label8.Text = "Id";
+            id_cliente.AutoSize = true;
+            id_cliente.Location = new System.Drawing.Point(17, 40);
+            id_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            id_cliente.Name = "id_cliente";
+            id_cliente.Size = new System.Drawing.Size(22, 20);
+            id_cliente.TabIndex = 13;
+            id_cliente.Text = "Id";
             // 
             // txtId
             // 
@@ -270,15 +270,15 @@ namespace SistemaGestion.Formularios
             txtId.Size = new System.Drawing.Size(132, 27);
             txtId.TabIndex = 12;
             // 
-            // label7
+            // direccion
             // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(17, 438);
-            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(72, 20);
-            label7.TabIndex = 11;
-            label7.Text = "Dirección";
+            direccion.AutoSize = true;
+            direccion.Location = new System.Drawing.Point(17, 438);
+            direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            direccion.Name = "direccion";
+            direccion.Size = new System.Drawing.Size(72, 20);
+            direccion.TabIndex = 11;
+            direccion.Text = "Dirección";
             // 
             // txtDireccion
             // 
@@ -288,15 +288,15 @@ namespace SistemaGestion.Formularios
             txtDireccion.Size = new System.Drawing.Size(863, 27);
             txtDireccion.TabIndex = 10;
             // 
-            // label6
+            // email
             // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(17, 363);
-            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(46, 20);
-            label6.TabIndex = 9;
-            label6.Text = "Email";
+            email.AutoSize = true;
+            email.Location = new System.Drawing.Point(17, 363);
+            email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            email.Name = "email";
+            email.Size = new System.Drawing.Size(46, 20);
+            email.TabIndex = 9;
+            email.Text = "Email";
             // 
             // txtEmail
             // 
@@ -306,15 +306,15 @@ namespace SistemaGestion.Formularios
             txtEmail.Size = new System.Drawing.Size(420, 27);
             txtEmail.TabIndex = 8;
             // 
-            // label5
+            // telefono
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(17, 288);
-            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(67, 20);
-            label5.TabIndex = 7;
-            label5.Text = "Teléfono";
+            telefono.AutoSize = true;
+            telefono.Location = new System.Drawing.Point(17, 288);
+            telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            telefono.Name = "telefono";
+            telefono.Size = new System.Drawing.Size(67, 20);
+            telefono.TabIndex = 7;
+            telefono.Text = "Teléfono";
             // 
             // txtTelefono
             // 
@@ -324,15 +324,15 @@ namespace SistemaGestion.Formularios
             txtTelefono.Size = new System.Drawing.Size(420, 27);
             txtTelefono.TabIndex = 6;
             // 
-            // label4
+            // documento
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(17, 212);
-            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(87, 20);
-            label4.TabIndex = 5;
-            label4.Text = "Documento";
+            documento.AutoSize = true;
+            documento.Location = new System.Drawing.Point(17, 212);
+            documento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            documento.Name = "documento";
+            documento.Size = new System.Drawing.Size(87, 20);
+            documento.TabIndex = 5;
+            documento.Text = "Documento";
             // 
             // txtDocumento
             // 
@@ -342,15 +342,15 @@ namespace SistemaGestion.Formularios
             txtDocumento.Size = new System.Drawing.Size(420, 27);
             txtDocumento.TabIndex = 4;
             // 
-            // label3
+            // apellido
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(233, 137);
-            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(66, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Apellido";
+            apellido.AutoSize = true;
+            apellido.Location = new System.Drawing.Point(233, 137);
+            apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            apellido.Name = "apellido";
+            apellido.Size = new System.Drawing.Size(66, 20);
+            apellido.TabIndex = 3;
+            apellido.Text = "Apellido";
             // 
             // txtApellido
             // 
@@ -360,15 +360,15 @@ namespace SistemaGestion.Formularios
             txtApellido.Size = new System.Drawing.Size(420, 27);
             txtApellido.TabIndex = 2;
             // 
-            // label2
+            // nombre
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(17, 137);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(64, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Nombre";
+            nombre.AutoSize = true;
+            nombre.Location = new System.Drawing.Point(17, 137);
+            nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nombre.Name = "nombre";
+            nombre.Size = new System.Drawing.Size(64, 20);
+            nombre.TabIndex = 1;
+            nombre.Text = "Nombre";
             // 
             // txtNombre
             // 
@@ -383,9 +383,9 @@ namespace SistemaGestion.Formularios
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1045, 709);
-            Controls.Add(groupBox1);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
+            Controls.Add(datos_cliente);
+            Controls.Add(pnl_registros);
+            Controls.Add(pnl_opciones);
             Controls.Add(gestion);
             Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             Name = "Frm_Cliente";
@@ -393,11 +393,11 @@ namespace SistemaGestion.Formularios
             Text = "Gestión de Clientes";
             gestion.ResumeLayout(false);
             gestion.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            pnl_opciones.ResumeLayout(false);
+            pnl_registros.ResumeLayout(false);
+            pnl_registros.PerformLayout();
+            datos_cliente.ResumeLayout(false);
+            datos_cliente.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -405,32 +405,32 @@ namespace SistemaGestion.Formularios
 
         private System.Windows.Forms.Panel gestion;
         private System.Windows.Forms.Label lblTotalRegistros;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Panel pnl_opciones;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnl_registros;
         private System.Windows.Forms.Button btnUltimo;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Label lblPosicion;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox datos_cliente;
+        private System.Windows.Forms.Label id_cliente;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label direccion;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label email;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label telefono;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label documento;
         private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label apellido;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nombre;
         private System.Windows.Forms.TextBox txtNombre;
     }
 }

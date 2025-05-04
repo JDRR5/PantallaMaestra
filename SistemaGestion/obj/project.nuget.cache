@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gVypEeHhKPQ=",
+  "dgSpecHash": "KTYgxAGINiQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\carva\\Downloads\\PantallaMaestra-master (2)\\PantallaMaestra-master (1)\\PantallaMaestra-master\\SistemaGestion\\SistemaGestion.csproj",
+  "projectFilePath": "C:\\Users\\carva\\Downloads\\PantallaMaestra-master\\PantallaMaestra-master\\SistemaGestion\\SistemaGestion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carva\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.118\\stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
     "C:\\Users\\carva\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512"
