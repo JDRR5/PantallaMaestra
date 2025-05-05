@@ -18,8 +18,9 @@ namespace SistemaGestion
         [STAThread]
         static void Main()
         {
-            // Para .NET 6/7/8
-            ApplicationConfiguration.Initialize();
+            // Configuración estándar para .NET Framework
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
             // Inicializar la base de datos
             try
@@ -97,6 +98,21 @@ namespace SistemaGestion
                                 );
                             ";
                             command.ExecuteNonQuery();
+                            
+                            // Crear tabla de abonos/pagos para la pantalla Maestro/Detalle
+                            command.CommandText = @"
+                                CREATE TABLE IF NOT EXISTS abonos (
+                                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                    id_cliente INTEGER NOT NULL,
+                                    id_producto INTEGER NOT NULL,
+                                    fecha TEXT NOT NULL,
+                                    monto REAL NOT NULL,
+                                    observaciones TEXT,
+                                    FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+                                    FOREIGN KEY (id_producto) REFERENCES productos(id)
+                                );
+                            ";
+                            command.ExecuteNonQuery();
 
                             // Insertar roles por defecto
                             command.CommandText = "INSERT INTO roles (nombre) VALUES ('Administrador');";
@@ -139,17 +155,17 @@ namespace SistemaGestion
                     // Insertar clientes de ejemplo
                     command.CommandText = @"
                         INSERT INTO clientes (nombre, apellido, documento, telefono, email, direccion) 
-                        VALUES ('Juan', 'Pérez', '12345678', '555-1234', 'juan@example.com', 'Calle 123');
+                        VALUES ('Juan', 'Pérez', '12345678', '3001234567', 'juan@example.com', 'Calle 123');
                     ";
                     command.ExecuteNonQuery();
                     command.CommandText = @"
                         INSERT INTO clientes (nombre, apellido, documento, telefono, email, direccion) 
-                        VALUES ('María', 'González', '87654321', '555-5678', 'maria@example.com', 'Avenida 456');
+                        VALUES ('María', 'González', '87654321', '3105678901', 'maria@example.com', 'Avenida 456');
                     ";
                     command.ExecuteNonQuery();
                     command.CommandText = @"
                         INSERT INTO clientes (nombre, apellido, documento, telefono, email, direccion) 
-                        VALUES ('Carlos', 'Rodríguez', '23456789', '555-9012', 'carlos@example.com', 'Plaza 789');
+                        VALUES ('Carlos', 'Rodríguez', '23456789', '3209012345', 'carlos@example.com', 'Plaza 789');
                     ";
                     command.ExecuteNonQuery();
 

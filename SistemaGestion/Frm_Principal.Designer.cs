@@ -30,6 +30,7 @@ namespace SistemaGestion.Formularios
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnRoles = new System.Windows.Forms.Button();
+            this.btnAbonos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@ namespace SistemaGestion.Formularios
             this.pnlDashboard = new System.Windows.Forms.Panel();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.lblTituloDashboard = new System.Windows.Forms.Label();
-            this.lblIntentos = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlDashboard.SuspendLayout();
@@ -49,8 +49,8 @@ namespace SistemaGestion.Formularios
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.Control;
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMenu.Controls.Add(this.lblIntentos);
             this.pnlMenu.Controls.Add(this.btnRoles);
+            this.pnlMenu.Controls.Add(this.btnAbonos);
             this.pnlMenu.Controls.Add(this.btnProductos);
             this.pnlMenu.Controls.Add(this.btnClientes);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -68,6 +68,16 @@ namespace SistemaGestion.Formularios
             this.btnRoles.TabIndex = 2;
             this.btnRoles.Text = "Gestión de Roles";
             this.btnRoles.UseVisualStyleBackColor = true;
+            // 
+            // btnAbonos
+            // 
+            this.btnAbonos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbonos.Location = new System.Drawing.Point(12, 270);
+            this.btnAbonos.Name = "btnAbonos";
+            this.btnAbonos.Size = new System.Drawing.Size(173, 50);
+            this.btnAbonos.TabIndex = 3;
+            this.btnAbonos.Text = "Pagos / Abonos";
+            this.btnAbonos.UseVisualStyleBackColor = true;
             // 
             // btnProductos
             // 
@@ -168,17 +178,7 @@ namespace SistemaGestion.Formularios
             this.lblTituloDashboard.TabIndex = 0;
             this.lblTituloDashboard.Text = "Panel de Control del Sistema";
             // 
-            // lblIntentos
-            // 
-            this.lblIntentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblIntentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIntentos.Location = new System.Drawing.Point(12, 522);
-            this.lblIntentos.Name = "lblIntentos";
-            this.lblIntentos.Size = new System.Drawing.Size(173, 28);
-            this.lblIntentos.TabIndex = 3;
-            this.lblIntentos.Text = "Intentos restantes: 3";
-            this.lblIntentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // Se eliminó el control lblIntentos ya que solo es relevante en el login
             // 
             // Frm_Principal
             // 
@@ -205,6 +205,7 @@ namespace SistemaGestion.Formularios
 
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnRoles;
+        private System.Windows.Forms.Button btnAbonos;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel pnlHeader;
@@ -214,6 +215,5 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Panel pnlDashboard;
         private System.Windows.Forms.Label lblInstrucciones;
         private System.Windows.Forms.Label lblTituloDashboard;
-        private System.Windows.Forms.Label lblIntentos;
     }
 }

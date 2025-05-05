@@ -201,9 +201,13 @@ namespace SistemaGestion.Formularios
                 INSERT OR IGNORE INTO roles (id, nombre) VALUES (3, 'Almacenista');
             ";
 
-            string crearUsuarioAdmin = @"
+            string crearUsuariosDefecto = @"
                 INSERT OR IGNORE INTO usuarios (username, password, id_rol) 
-                VALUES ('admin', 'admin123', 1)
+                VALUES ('admin', 'admin123', 1);
+                INSERT OR IGNORE INTO usuarios (username, password, id_rol) 
+                VALUES ('vendedor', 'vendedor123', 2);
+                INSERT OR IGNORE INTO usuarios (username, password, id_rol) 
+                VALUES ('almacenista', 'almacen123', 3)
             ";
 
             using (var conexion = Frm_BasedeDatos.Instance.CrearConexion())
@@ -216,7 +220,7 @@ namespace SistemaGestion.Formularios
                         ExecuteNonQuery(conexion, crearTablaRoles);
                         ExecuteNonQuery(conexion, crearTablaUsuarios);
                         ExecuteNonQuery(conexion, insertarRoles);
-                        ExecuteNonQuery(conexion, crearUsuarioAdmin);
+                        ExecuteNonQuery(conexion, crearUsuariosDefecto);
                         
                         transaccion.Commit();
                     }
@@ -259,6 +263,9 @@ namespace SistemaGestion.Formularios
                 lblRol.Visible = modoRegistro;
                 cmbRol.Visible = modoRegistro;
                 
+                // Asegurar que el label de intentos sea visible en modo Login
+                lblIntentosRestantes.Visible = !modoRegistro;
+                
                 SuspendLayout();
 
                 if (modoRegistro)
@@ -279,6 +286,9 @@ namespace SistemaGestion.Formularios
                     btnIniciar.Location = btnIniciarOriginalPos;
                     btnRegistrar.Location = btnRegistrarOriginalPos;
                     btnCancelar.Location = btnCancelarOriginalPos;
+                    
+                    // Asegurarse que los intentos estén actualizados
+                    ActualizarContadorIntentos();
                 }
                 
                 btnIniciar.Visible = true;
@@ -385,10 +395,9 @@ namespace SistemaGestion.Formularios
                     ActualizarContadorIntentos();
                 }
                 
-                // Limpiar campos al cambiar de modo
-                txtUsuario.Clear();
-                txtContraseña.Clear();
-                if (cmbRol.Visible)
+                // No se limpian los campos al cambiar de modo para mantener los datos
+                // Solo resetear el rol si estamos cambiando de registro a login
+                if (modoRegistro && cmbRol.Visible)
                     cmbRol.SelectedIndex = -1;
             }
             catch (Exception ex)

@@ -32,12 +32,7 @@ namespace SistemaGestion.Estados
                 return;
             }
 
-            if (password.Length < 8)
-            {
-                MessageBox.Show("La contraseña debe tener al menos 8 caracteres.", 
-                    "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            // Se eliminó el requisito de longitud mínima para la contraseña
 
             if (UsuarioExiste(username))
             {

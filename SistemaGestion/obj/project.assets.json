@@ -1,66 +1,100 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {
-      "Stub.System.Data.SQLite.Core.NetStandard/1.0.118": {
+    ".NETFramework,Version=v4.7.2": {
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.118": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/System.Data.SQLite.dll": {
+          "lib/net46/System.Data.SQLite.dll": {
             "related": ".dll.altconfig;.xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/System.Data.SQLite.dll": {
+          "lib/net46/System.Data.SQLite.dll": {
             "related": ".dll.altconfig;.xml"
           }
         },
-        "runtimeTargets": {
-          "runtimes/linux-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/osx-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win-x64/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/SQLite.Interop.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
+        "build": {
+          "buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets": {}
         }
       },
       "System.Data.SQLite.Core/1.0.118": {
         "type": "package",
         "dependencies": {
-          "Stub.System.Data.SQLite.Core.NetStandard": "[1.0.118]"
+          "Stub.System.Data.SQLite.Core.NetFramework": "[1.0.118]"
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Stub.System.Data.SQLite.Core.NetFramework/1.0.118": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {
+            "related": ".dll.altconfig;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets": {}
+        }
+      },
+      "System.Data.SQLite.Core/1.0.118": {
+        "type": "package",
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetFramework": "[1.0.118]"
         }
       }
     }
   },
   "libraries": {
-    "Stub.System.Data.SQLite.Core.NetStandard/1.0.118": {
-      "sha512": "4TS8IZvDj0ud6utxfXI6zv9Ditk4U9Kt9KqLyAIQGcU3GXp5oGBHgGZifq+APcqRCayuN/MSE8t9ZZmygtU28A==",
+    "Stub.System.Data.SQLite.Core.NetFramework/1.0.118": {
+      "sha512": "oKvqJyhos18gUWQ7DphJwke15HsmXjcfaYm/qymJDkXHraqwDy0BqYMbbwDSJ/bmcbhug3jQEZ1N1FjynGFFyg==",
       "type": "package",
-      "path": "stub.system.data.sqlite.core.netstandard/1.0.118",
+      "path": "stub.system.data.sqlite.core.netframework/1.0.118",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard2.0/System.Data.SQLite.dll",
-        "lib/netstandard2.0/System.Data.SQLite.dll.altconfig",
-        "lib/netstandard2.0/System.Data.SQLite.xml",
-        "lib/netstandard2.1/System.Data.SQLite.dll",
-        "lib/netstandard2.1/System.Data.SQLite.dll.altconfig",
-        "lib/netstandard2.1/System.Data.SQLite.xml",
-        "runtimes/linux-x64/native/SQLite.Interop.dll",
-        "runtimes/osx-x64/native/SQLite.Interop.dll",
-        "runtimes/win-x64/native/SQLite.Interop.dll",
-        "runtimes/win-x86/native/SQLite.Interop.dll",
-        "stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
-        "stub.system.data.sqlite.core.netstandard.nuspec"
+        "build/net20/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "build/net45/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "build/net45/x64/SQLite.Interop.dll",
+        "build/net45/x86/SQLite.Interop.dll",
+        "build/net451/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "build/net451/x64/SQLite.Interop.dll",
+        "build/net451/x86/SQLite.Interop.dll",
+        "build/net46/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "build/net46/x64/SQLite.Interop.dll",
+        "build/net46/x86/SQLite.Interop.dll",
+        "buildTransitive/net20/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "buildTransitive/net40/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "buildTransitive/net45/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "buildTransitive/net451/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.dll.altconfig",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.dll.altconfig",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.dll.altconfig",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.dll.altconfig",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.dll.altconfig",
+        "lib/net46/System.Data.SQLite.xml",
+        "stub.system.data.sqlite.core.netframework.1.0.118.nupkg.sha512",
+        "stub.system.data.sqlite.core.netframework.nuspec"
       ]
     },
     "System.Data.SQLite.Core/1.0.118": {
@@ -76,41 +110,41 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": [
+    ".NETFramework,Version=v4.7.2": [
       "System.Data.SQLite.Core >= 1.0.118"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carva\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carva\\Downloads\\PantallaMaestra-master\\PantallaMaestra-master\\SistemaGestion\\SistemaGestion.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PantallaMaestra\\SistemaGestion\\SistemaGestion.csproj",
       "projectName": "SistemaGestion",
-      "projectPath": "C:\\Users\\carva\\Downloads\\PantallaMaestra-master\\PantallaMaestra-master\\SistemaGestion\\SistemaGestion.csproj",
-      "packagesPath": "C:\\Users\\carva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carva\\Downloads\\PantallaMaestra-master\\PantallaMaestra-master\\SistemaGestion\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\PantallaMaestra\\SistemaGestion\\SistemaGestion.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\PantallaMaestra\\SistemaGestion\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\carva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net472"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net472": {
+          "targetAlias": "net472",
           "projectReferences": {}
         }
       },
@@ -127,34 +161,20 @@
       "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+      "net472": {
+        "targetAlias": "net472",
         "dependencies": {
           "System.Data.SQLite.Core": {
             "target": "Package",
             "version": "[1.0.118, )"
           }
         },
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48",
-          "net481"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
       }
     }
   }

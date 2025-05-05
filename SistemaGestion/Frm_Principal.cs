@@ -17,13 +17,10 @@ namespace SistemaGestion.Formularios
         private Usuario _usuarioActual;
         private Timer _animacionTimer;
         private List<Control> _controlesAuxiliares = new List<Control>();
-        private int _intentos;
-
         public Frm_Principal(Usuario usuario)
         {
             InitializeComponent();
             _usuarioActual = usuario;
-            _intentos = 3; // Inicializar contador de intentos
 
             ConfigurarControles();
             ConfigurarEventos();
@@ -35,7 +32,6 @@ namespace SistemaGestion.Formularios
         {
             lblBienvenida.Text = $"Bienvenido/a, {_usuarioActual.Username}";
             lblRol.Text = $"Rol: {_usuarioActual.NombreRol}";
-            lblIntentos.Text = $"Intentos restantes: {_intentos}";
             pnlDashboard.Visible = true;
         }
 
@@ -45,6 +41,7 @@ namespace SistemaGestion.Formularios
             btnClientes.Click += BtnClientes_Click;
             btnProductos.Click += BtnProductos_Click;
             btnRoles.Click += BtnRoles_Click;
+            btnAbonos.Click += BtnAbonos_Click;
             btnCerrarSesion.Click += BtnCerrarSesion_Click;
         }
 
@@ -63,11 +60,6 @@ namespace SistemaGestion.Formularios
 
         private void AnimacionTimer_Tick(object sender, EventArgs e)
         {
-            // Animación de contador de intentos
-            lblIntentos.ForeColor = _intentos <= 1 ? 
-                Color.FromArgb(255, new Random().Next(100, 255), new Random().Next(100)) : 
-                SystemColors.ControlText;
-            
             // Microinteracciones para botones del menú
             foreach (Button btn in pnlMenu.Controls.OfType<Button>())
             {
@@ -91,11 +83,13 @@ namespace SistemaGestion.Formularios
                     btnClientes.Enabled = true;
                     btnProductos.Enabled = true;
                     btnRoles.Enabled = true;
+                    btnAbonos.Enabled = true;
                     break;
                 case "vendedor":
                     btnClientes.Enabled = true;
                     btnProductos.Enabled = false;
                     btnRoles.Enabled = false;
+                    btnAbonos.Enabled = true;
                     break;
                 case "almacenista":
                     btnClientes.Enabled = false;
@@ -134,12 +128,27 @@ namespace SistemaGestion.Formularios
 
         private void BtnRoles_Click(object sender, EventArgs e)
         {
-            if (!btnRoles.Enabled) return;
-            
-            using (var formRoles = new Frm_Roles(_usuarioActual))
+            try
             {
-                AnimacionUI.EfectoSlide(formRoles);
-                formRoles.ShowDialog();
+                var frm = new Frm_Roles(_usuarioActual);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir la gestión de roles: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnAbonos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var frm = new Frm_Abonos(_usuarioActual);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al abrir la gestión de pagos/abonos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -37,6 +37,16 @@ namespace SistemaGestion.Formularios
             // Eventos de botones CRUD
             btnGuardar.Click += BtnGuardar_Click;
             btnCancelar.Click += BtnCancelar_Click;
+            
+            // Agregar botón Editar y su evento
+            Button btnEditar = new Button();
+            btnEditar.Text = "Editar Rol";
+            btnEditar.Size = new Size(100, 51); // Mismo tamaño que los otros botones
+            btnEditar.Location = new Point(15, 140); // Posición debajo de Cancelar
+            btnEditar.UseVisualStyleBackColor = true; // Mismo estilo que los otros botones
+            btnEditar.Click += BtnEditar_Click;
+            btnEditar.Name = "btnEditar";
+            panel_guardar.Controls.Add(btnEditar);
 
             // Eventos de navegación
             btnPrimero.Click += BtnPrimero_Click;
@@ -55,8 +65,39 @@ namespace SistemaGestion.Formularios
 
         private void ConfigurarInterfaz()
         {
-            habilitarEdicionCampos(false);
-            ActualizarBotonesNavegacion();
+            try
+            {
+                // Configuración inicial
+                _modoEdicion = false;
+                
+                // Asegurarse que el panel lateral sea visible
+                panel_guardar.Visible = true;
+                
+                // Configurar la visibilidad inicial de los botones
+                btnGuardar.Visible = false;
+                btnCancelar.Visible = false;
+                btnGuardar.Enabled = false;
+                btnCancelar.Enabled = false;
+                
+                // Obtener y configurar el botón Editar
+                Button btnEditar = panel_guardar.Controls["btnEditar"] as Button;
+                if (btnEditar != null)
+                {
+                    btnEditar.Visible = true;
+                    btnEditar.Enabled = true;
+                }
+                
+                // Aplicar configuración general
+                habilitarEdicionCampos(false);
+                ActualizarBotonesNavegacion();
+                
+                // Asegurar que el combobox de roles esté deshabilitado inicialmente
+                cmbRol.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al configurar la interfaz: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CargarRoles()
@@ -133,12 +174,14 @@ namespace SistemaGestion.Formularios
 
         private void VerificarPermisosEdicion()
         {
-            // No se puede cambiar el rol si:
-            // 1. El usuario es administrador y no es el usuario actual
-            // 2. El usuario actual es administrador
+            // Verificaciones para permitir la edición de roles:
+            // 1. No se puede cambiar el propio rol
+            // 2. Sólo administradores pueden cambiar roles de otros usuarios
 
             bool esAdmin = false;
             bool esUsuarioActual = false;
+            bool esUsuarioAdmin = false;
+            bool usuarioActualEsAdmin = (_usuarioActual.IdRol == 1); // El usuario que está viendo el formulario es admin
 
             if (_usuarioActualIndex >= 0 && _usuarioActualIndex < _usuariosDataTable.Rows.Count)
             {
@@ -146,28 +189,35 @@ namespace SistemaGestion.Formularios
                 int idRol = Convert.ToInt32(row["id_rol"]);
                 int idUsuario = Convert.ToInt32(row["id"]);
                 
-                esAdmin = (idRol == 1); // Rol 1 es Administrador
+                esAdmin = (idRol == 1); // El usuario siendo visto es administrador
                 esUsuarioActual = (idUsuario == _usuarioActual.Id);
+                esUsuarioAdmin = esAdmin; // Para mejor legibilidad
             }
 
-            // El administrador no puede cambiar roles de otros administradores ni su propio rol
-            bool puedeEditar = !esAdmin;
+            // Condiciones para editar:
+            // 1. No puede editar su propio rol
+            // 2. Solo administradores pueden cambiar roles
+            // 3. Administradores pueden cambiar roles de otros usuarios, incluso otros admins
+            bool puedeEditar = !esUsuarioActual && usuarioActualEsAdmin;
 
             btnGuardar.Enabled = puedeEditar;
             btnCancelar.Enabled = _modoEdicion;
             
             // Información para el usuario
-            if (esAdmin)
+            if (esUsuarioActual)
             {
-                if (esUsuarioActual)
-                {
-                    lblInfoEdicion.Text = "No puedes cambiar tu propio rol de administrador.";
-                }
-                else
-                {
-                    lblInfoEdicion.Text = "No puedes cambiar el rol de otro administrador.";
-                }
+                lblInfoEdicion.Text = "No puedes cambiar tu propio rol.";
                 lblInfoEdicion.ForeColor = Color.Red;
+            }
+            else if (!usuarioActualEsAdmin)
+            {
+                lblInfoEdicion.Text = "Solo los administradores pueden cambiar roles.";
+                lblInfoEdicion.ForeColor = Color.Red;
+            }
+            else if (esUsuarioAdmin)
+            {
+                lblInfoEdicion.Text = "Ten cuidado al cambiar el rol de otro administrador.";
+                lblInfoEdicion.ForeColor = Color.OrangeRed;
             }
             else
             {
@@ -190,14 +240,37 @@ namespace SistemaGestion.Formularios
             _modoEdicion = habilitar;
             cmbRol.Enabled = habilitar;
 
-            btnGuardar.Enabled = habilitar && btnGuardar.Enabled;
-            btnCancelar.Enabled = habilitar;
+            try
+            {
+                // Obtener referencia al botón Editar
+                Button btnEditar = panel_guardar.Controls["btnEditar"] as Button;
+                
+                // Configurar visibilidad de los botones según el modo
+                if (btnEditar != null)
+                {
+                    btnEditar.Visible = !habilitar; // Ocultar botón Editar en modo edición
+                    btnEditar.Enabled = !habilitar;
+                }
 
-            // Botones de navegación
-            btnPrimero.Enabled = !habilitar && _usuariosDataTable.Rows.Count > 1;
-            btnAnterior.Enabled = !habilitar && _usuarioActualIndex > 0;
-            btnSiguiente.Enabled = !habilitar && _usuarioActualIndex < _usuariosDataTable.Rows.Count - 1;
-            btnUltimo.Enabled = !habilitar && _usuariosDataTable.Rows.Count > 1;
+                // Siempre mantener el panel lateral visible
+                panel_guardar.Visible = true;
+                
+                // Configurar los botones de guardar y cancelar
+                btnGuardar.Visible = habilitar; // Mostrar botón Guardar en modo edición
+                btnGuardar.Enabled = habilitar;
+                btnCancelar.Visible = habilitar; // Mostrar botón Cancelar en modo edición
+                btnCancelar.Enabled = habilitar;
+
+                // Botones de navegación
+                btnPrimero.Enabled = !habilitar && _usuariosDataTable.Rows.Count > 1;
+                btnAnterior.Enabled = !habilitar && _usuarioActualIndex > 0;
+                btnSiguiente.Enabled = !habilitar && _usuarioActualIndex < _usuariosDataTable.Rows.Count - 1;
+                btnUltimo.Enabled = !habilitar && _usuariosDataTable.Rows.Count > 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al configurar la interfaz: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ActualizarBotonesNavegacion()
@@ -225,6 +298,39 @@ namespace SistemaGestion.Formularios
         }
 
         #region Eventos de Botones CRUD
+        
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            // Verificar si el usuario actual es administrador
+            if (_usuarioActual.IdRol != 1)
+            {
+                MessageBox.Show("Solo los administradores pueden editar roles de usuarios.", 
+                    "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            // Verificar si hay registros para editar
+            if (_usuariosDataTable == null || _usuariosDataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("No hay usuarios para editar.", 
+                    "Sin datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            // Comprobar si el usuario seleccionado no es el usuario actual
+            int idUsuarioSeleccionado = Convert.ToInt32(_usuariosDataTable.Rows[_usuarioActualIndex]["id"]);
+            if (idUsuarioSeleccionado == _usuarioActual.Id)
+            {
+                MessageBox.Show("No puedes cambiar tu propio rol.", 
+                    "Operación no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            // Activar el modo de edición
+            _modoEdicion = true;
+            habilitarEdicionCampos(true);
+            cmbRol.Focus();
+        }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
@@ -255,14 +361,8 @@ namespace SistemaGestion.Formularios
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-
-            // El administrador no puede cambiar roles de otros administradores
-            if (idRolActual == 1) // 1 = Administrador
-            {
-                MessageBox.Show("No puedes cambiar el rol de un administrador.", "Operación no permitida", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+            
+            // Se permite cambiar el rol de cualquier usuario que no sea el usuario actual
 
             // Confirmar el cambio de rol
             string nombreRolNuevo = ((DataRowView)cmbRol.SelectedItem)["nombre"].ToString();
