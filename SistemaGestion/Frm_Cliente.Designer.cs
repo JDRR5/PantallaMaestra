@@ -28,384 +28,385 @@ namespace SistemaGestion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            gestion = new System.Windows.Forms.Panel();
-            lblTotalRegistros = new System.Windows.Forms.Label();
-            titulo = new System.Windows.Forms.Label();
-            pnl_opciones = new System.Windows.Forms.Panel();
-            btnCancelar = new System.Windows.Forms.Button();
-            btnEliminar = new System.Windows.Forms.Button();
-            btnGuardar = new System.Windows.Forms.Button();
-            btnNuevo = new System.Windows.Forms.Button();
-            pnl_registros = new System.Windows.Forms.Panel();
-            btnUltimo = new System.Windows.Forms.Button();
-            btnSiguiente = new System.Windows.Forms.Button();
-            btnAnterior = new System.Windows.Forms.Button();
-            btnPrimero = new System.Windows.Forms.Button();
-            lblPosicion = new System.Windows.Forms.Label();
-            datos_cliente = new System.Windows.Forms.GroupBox();
-            id_cliente = new System.Windows.Forms.Label();
-            txtId = new System.Windows.Forms.TextBox();
-            direccion = new System.Windows.Forms.Label();
-            txtDireccion = new System.Windows.Forms.TextBox();
-            email = new System.Windows.Forms.Label();
-            txtEmail = new System.Windows.Forms.TextBox();
-            telefono = new System.Windows.Forms.Label();
-            txtTelefono = new System.Windows.Forms.TextBox();
-            documento = new System.Windows.Forms.Label();
-            txtDocumento = new System.Windows.Forms.TextBox();
-            apellido = new System.Windows.Forms.Label();
-            txtApellido = new System.Windows.Forms.TextBox();
-            nombre = new System.Windows.Forms.Label();
-            txtNombre = new System.Windows.Forms.TextBox();
-            gestion.SuspendLayout();
-            pnl_opciones.SuspendLayout();
-            pnl_registros.SuspendLayout();
-            datos_cliente.SuspendLayout();
-            SuspendLayout();
+            this.pnl_gestion = new System.Windows.Forms.Panel();
+            this.lblTotalRegistros = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.pnl_opciones = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.pnl_registros = new System.Windows.Forms.Panel();
+            this.btnUltimo = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
+            this.btnPrimero = new System.Windows.Forms.Button();
+            this.lblPosicion = new System.Windows.Forms.Label();
+            this.grp_datoscliente = new System.Windows.Forms.GroupBox();
+            this.id_cliente = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lbl_direccion = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lbl_telefono = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.lbl_documento = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.lbl_apellido = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.lbl_nombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.pnl_gestion.SuspendLayout();
+            this.pnl_opciones.SuspendLayout();
+            this.pnl_registros.SuspendLayout();
+            this.grp_datoscliente.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // gestion
+            // pnl_gestion
             // 
-            gestion.BackColor = System.Drawing.SystemColors.ControlLight;
-            gestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            gestion.Controls.Add(lblTotalRegistros);
-            gestion.Controls.Add(titulo);
-            gestion.Dock = System.Windows.Forms.DockStyle.Top;
-            gestion.Location = new System.Drawing.Point(0, 0);
-            gestion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            gestion.Name = "gestion";
-            gestion.Size = new System.Drawing.Size(1045, 91);
-            gestion.TabIndex = 0;
+            this.pnl_gestion.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_gestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_gestion.Controls.Add(this.lblTotalRegistros);
+            this.pnl_gestion.Controls.Add(this.lbl_titulo);
+            this.pnl_gestion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_gestion.Location = new System.Drawing.Point(0, 0);
+            this.pnl_gestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_gestion.Name = "pnl_gestion";
+            this.pnl_gestion.Size = new System.Drawing.Size(1045, 73);
+            this.pnl_gestion.TabIndex = 0;
             // 
             // lblTotalRegistros
             // 
-            lblTotalRegistros.AutoSize = true;
-            lblTotalRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lblTotalRegistros.Location = new System.Drawing.Point(17, 54);
-            lblTotalRegistros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblTotalRegistros.Name = "lblTotalRegistros";
-            lblTotalRegistros.Size = new System.Drawing.Size(136, 20);
-            lblTotalRegistros.TabIndex = 1;
-            lblTotalRegistros.Text = "Total: 0 registros";
+            this.lblTotalRegistros.AutoSize = true;
+            this.lblTotalRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRegistros.Location = new System.Drawing.Point(17, 43);
+            this.lblTotalRegistros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRegistros.Name = "lblTotalRegistros";
+            this.lblTotalRegistros.Size = new System.Drawing.Size(136, 20);
+            this.lblTotalRegistros.TabIndex = 1;
+            this.lblTotalRegistros.Text = "Total: 0 registros";
             // 
-            // titulo
+            // lbl_titulo
             // 
-            titulo.AutoSize = true;
-            titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            titulo.Location = new System.Drawing.Point(16, 14);
-            titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            titulo.Name = "titulo";
-            titulo.Size = new System.Drawing.Size(243, 29);
-            titulo.TabIndex = 0;
-            titulo.Text = "Gestión de Clientes";
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.Location = new System.Drawing.Point(16, 11);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(243, 29);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "Gestión de Clientes";
             // 
             // pnl_opciones
             // 
-            pnl_opciones.BackColor = System.Drawing.SystemColors.Control;
-            pnl_opciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pnl_opciones.Controls.Add(btnCancelar);
-            pnl_opciones.Controls.Add(btnEliminar);
-            pnl_opciones.Controls.Add(btnGuardar);
-            pnl_opciones.Controls.Add(btnNuevo);
-            pnl_opciones.Dock = System.Windows.Forms.DockStyle.Right;
-            pnl_opciones.Location = new System.Drawing.Point(912, 91);
-            pnl_opciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            pnl_opciones.Name = "pnl_opciones";
-            pnl_opciones.Size = new System.Drawing.Size(133, 618);
-            pnl_opciones.TabIndex = 1;
+            this.pnl_opciones.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_opciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_opciones.Controls.Add(this.btnCancelar);
+            this.pnl_opciones.Controls.Add(this.btnEliminar);
+            this.pnl_opciones.Controls.Add(this.btnGuardar);
+            this.pnl_opciones.Controls.Add(this.btnNuevo);
+            this.pnl_opciones.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_opciones.Location = new System.Drawing.Point(912, 73);
+            this.pnl_opciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_opciones.Name = "pnl_opciones";
+            this.pnl_opciones.Size = new System.Drawing.Size(133, 494);
+            this.pnl_opciones.TabIndex = 1;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new System.Drawing.Point(15, 198);
-            btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new System.Drawing.Size(100, 51);
-            btnCancelar.TabIndex = 3;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(15, 158);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 41);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new System.Drawing.Point(15, 138);
-            btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new System.Drawing.Size(100, 51);
-            btnEliminar.TabIndex = 2;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(15, 110);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 41);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new System.Drawing.Point(15, 78);
-            btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new System.Drawing.Size(100, 51);
-            btnGuardar.TabIndex = 1;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(15, 62);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 41);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new System.Drawing.Point(15, 18);
-            btnNuevo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new System.Drawing.Size(100, 51);
-            btnNuevo.TabIndex = 0;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(15, 14);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(100, 41);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // pnl_registros
             // 
-            pnl_registros.BackColor = System.Drawing.SystemColors.Control;
-            pnl_registros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pnl_registros.Controls.Add(btnUltimo);
-            pnl_registros.Controls.Add(btnSiguiente);
-            pnl_registros.Controls.Add(btnAnterior);
-            pnl_registros.Controls.Add(btnPrimero);
-            pnl_registros.Controls.Add(lblPosicion);
-            pnl_registros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            pnl_registros.Location = new System.Drawing.Point(0, 636);
-            pnl_registros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            pnl_registros.Name = "pnl_registros";
-            pnl_registros.Size = new System.Drawing.Size(912, 73);
-            pnl_registros.TabIndex = 2;
+            this.pnl_registros.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_registros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_registros.Controls.Add(this.btnUltimo);
+            this.pnl_registros.Controls.Add(this.btnSiguiente);
+            this.pnl_registros.Controls.Add(this.btnAnterior);
+            this.pnl_registros.Controls.Add(this.btnPrimero);
+            this.pnl_registros.Controls.Add(this.lblPosicion);
+            this.pnl_registros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_registros.Location = new System.Drawing.Point(0, 508);
+            this.pnl_registros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_registros.Name = "pnl_registros";
+            this.pnl_registros.Size = new System.Drawing.Size(912, 59);
+            this.pnl_registros.TabIndex = 2;
             // 
             // btnUltimo
             // 
-            btnUltimo.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnUltimo.Location = new System.Drawing.Point(802, 15);
-            btnUltimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnUltimo.Name = "btnUltimo";
-            btnUltimo.Size = new System.Drawing.Size(80, 43);
-            btnUltimo.TabIndex = 4;
-            btnUltimo.Text = ">>";
-            btnUltimo.UseVisualStyleBackColor = true;
+            this.btnUltimo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUltimo.Location = new System.Drawing.Point(802, 12);
+            this.btnUltimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUltimo.Name = "btnUltimo";
+            this.btnUltimo.Size = new System.Drawing.Size(80, 34);
+            this.btnUltimo.TabIndex = 4;
+            this.btnUltimo.Text = ">>";
+            this.btnUltimo.UseVisualStyleBackColor = true;
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnSiguiente.Location = new System.Drawing.Point(714, 15);
-            btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new System.Drawing.Size(80, 43);
-            btnSiguiente.TabIndex = 3;
-            btnSiguiente.Text = ">";
-            btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSiguiente.Location = new System.Drawing.Point(714, 12);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(80, 34);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = ">";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
             // 
             // btnAnterior
             // 
-            btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnAnterior.Location = new System.Drawing.Point(626, 15);
-            btnAnterior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new System.Drawing.Size(80, 43);
-            btnAnterior.TabIndex = 2;
-            btnAnterior.Text = "<";
-            btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnterior.Location = new System.Drawing.Point(626, 12);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(80, 34);
+            this.btnAnterior.TabIndex = 2;
+            this.btnAnterior.Text = "<";
+            this.btnAnterior.UseVisualStyleBackColor = true;
             // 
             // btnPrimero
             // 
-            btnPrimero.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnPrimero.Location = new System.Drawing.Point(538, 15);
-            btnPrimero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnPrimero.Name = "btnPrimero";
-            btnPrimero.Size = new System.Drawing.Size(80, 43);
-            btnPrimero.TabIndex = 1;
-            btnPrimero.Text = "<<";
-            btnPrimero.UseVisualStyleBackColor = true;
+            this.btnPrimero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrimero.Location = new System.Drawing.Point(538, 12);
+            this.btnPrimero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrimero.Name = "btnPrimero";
+            this.btnPrimero.Size = new System.Drawing.Size(80, 34);
+            this.btnPrimero.TabIndex = 1;
+            this.btnPrimero.Text = "<<";
+            this.btnPrimero.UseVisualStyleBackColor = true;
             // 
             // lblPosicion
             // 
-            lblPosicion.AutoSize = true;
-            lblPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lblPosicion.Location = new System.Drawing.Point(17, 25);
-            lblPosicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblPosicion.Name = "lblPosicion";
-            lblPosicion.Size = new System.Drawing.Size(108, 20);
-            lblPosicion.TabIndex = 0;
-            lblPosicion.Text = "Sin registros.";
+            this.lblPosicion.AutoSize = true;
+            this.lblPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.Location = new System.Drawing.Point(17, 20);
+            this.lblPosicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPosicion.Name = "lblPosicion";
+            this.lblPosicion.Size = new System.Drawing.Size(108, 20);
+            this.lblPosicion.TabIndex = 0;
+            this.lblPosicion.Text = "Sin registros.";
             // 
-            // datos_cliente
+            // grp_datoscliente
             // 
-            datos_cliente.Controls.Add(id_cliente);
-            datos_cliente.Controls.Add(txtId);
-            datos_cliente.Controls.Add(direccion);
-            datos_cliente.Controls.Add(txtDireccion);
-            datos_cliente.Controls.Add(email);
-            datos_cliente.Controls.Add(txtEmail);
-            datos_cliente.Controls.Add(telefono);
-            datos_cliente.Controls.Add(txtTelefono);
-            datos_cliente.Controls.Add(documento);
-            datos_cliente.Controls.Add(txtDocumento);
-            datos_cliente.Controls.Add(apellido);
-            datos_cliente.Controls.Add(txtApellido);
-            datos_cliente.Controls.Add(nombre);
-            datos_cliente.Controls.Add(txtNombre);
-            datos_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            datos_cliente.Location = new System.Drawing.Point(0, 91);
-            datos_cliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            datos_cliente.Name = "datos_cliente";
-            datos_cliente.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            datos_cliente.Size = new System.Drawing.Size(912, 545);
-            datos_cliente.TabIndex = 3;
-            datos_cliente.TabStop = false;
-            datos_cliente.Text = "Datos del Cliente";
+            this.grp_datoscliente.Controls.Add(this.id_cliente);
+            this.grp_datoscliente.Controls.Add(this.txtId);
+            this.grp_datoscliente.Controls.Add(this.lbl_direccion);
+            this.grp_datoscliente.Controls.Add(this.txtDireccion);
+            this.grp_datoscliente.Controls.Add(this.lbl_email);
+            this.grp_datoscliente.Controls.Add(this.txtEmail);
+            this.grp_datoscliente.Controls.Add(this.lbl_telefono);
+            this.grp_datoscliente.Controls.Add(this.txtTelefono);
+            this.grp_datoscliente.Controls.Add(this.lbl_documento);
+            this.grp_datoscliente.Controls.Add(this.txtDocumento);
+            this.grp_datoscliente.Controls.Add(this.lbl_apellido);
+            this.grp_datoscliente.Controls.Add(this.txtApellido);
+            this.grp_datoscliente.Controls.Add(this.lbl_nombre);
+            this.grp_datoscliente.Controls.Add(this.txtNombre);
+            this.grp_datoscliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grp_datoscliente.Location = new System.Drawing.Point(0, 73);
+            this.grp_datoscliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grp_datoscliente.Name = "grp_datoscliente";
+            this.grp_datoscliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grp_datoscliente.Size = new System.Drawing.Size(912, 435);
+            this.grp_datoscliente.TabIndex = 3;
+            this.grp_datoscliente.TabStop = false;
+            this.grp_datoscliente.Text = "Datos del Cliente";
             // 
             // id_cliente
             // 
-            id_cliente.AutoSize = true;
-            id_cliente.Location = new System.Drawing.Point(17, 40);
-            id_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            id_cliente.Name = "id_cliente";
-            id_cliente.Size = new System.Drawing.Size(22, 20);
-            id_cliente.TabIndex = 13;
-            id_cliente.Text = "Id";
+            this.id_cliente.AutoSize = true;
+            this.id_cliente.Location = new System.Drawing.Point(17, 32);
+            this.id_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.id_cliente.Name = "id_cliente";
+            this.id_cliente.Size = new System.Drawing.Size(18, 16);
+            this.id_cliente.TabIndex = 13;
+            this.id_cliente.Text = "Id";
             // 
             // txtId
             // 
-            txtId.Enabled = false;
-            txtId.Location = new System.Drawing.Point(17, 65);
-            txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtId.Name = "txtId";
-            txtId.ReadOnly = true;
-            txtId.Size = new System.Drawing.Size(132, 27);
-            txtId.TabIndex = 12;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(17, 52);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(132, 22);
+            this.txtId.TabIndex = 12;
             // 
-            // direccion
+            // lbl_direccion
             // 
-            direccion.AutoSize = true;
-            direccion.Location = new System.Drawing.Point(17, 438);
-            direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            direccion.Name = "direccion";
-            direccion.Size = new System.Drawing.Size(72, 20);
-            direccion.TabIndex = 11;
-            direccion.Text = "Dirección";
+            this.lbl_direccion.AutoSize = true;
+            this.lbl_direccion.Location = new System.Drawing.Point(17, 350);
+            this.lbl_direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_direccion.Name = "lbl_direccion";
+            this.lbl_direccion.Size = new System.Drawing.Size(64, 16);
+            this.lbl_direccion.TabIndex = 11;
+            this.lbl_direccion.Text = "Dirección";
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new System.Drawing.Point(17, 463);
-            txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new System.Drawing.Size(863, 27);
-            txtDireccion.TabIndex = 10;
+            this.txtDireccion.Location = new System.Drawing.Point(17, 370);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(863, 22);
+            this.txtDireccion.TabIndex = 10;
             // 
-            // email
+            // lbl_email
             // 
-            email.AutoSize = true;
-            email.Location = new System.Drawing.Point(17, 363);
-            email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            email.Name = "email";
-            email.Size = new System.Drawing.Size(46, 20);
-            email.TabIndex = 9;
-            email.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(17, 290);
+            this.lbl_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(41, 16);
+            this.lbl_email.TabIndex = 9;
+            this.lbl_email.Text = "Email";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new System.Drawing.Point(17, 388);
-            txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new System.Drawing.Size(420, 27);
-            txtEmail.TabIndex = 8;
+            this.txtEmail.Location = new System.Drawing.Point(17, 310);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(420, 22);
+            this.txtEmail.TabIndex = 8;
             // 
-            // telefono
+            // lbl_telefono
             // 
-            telefono.AutoSize = true;
-            telefono.Location = new System.Drawing.Point(17, 288);
-            telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            telefono.Name = "telefono";
-            telefono.Size = new System.Drawing.Size(67, 20);
-            telefono.TabIndex = 7;
-            telefono.Text = "Teléfono";
+            this.lbl_telefono.AutoSize = true;
+            this.lbl_telefono.Location = new System.Drawing.Point(17, 230);
+            this.lbl_telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_telefono.Name = "lbl_telefono";
+            this.lbl_telefono.Size = new System.Drawing.Size(61, 16);
+            this.lbl_telefono.TabIndex = 7;
+            this.lbl_telefono.Text = "Teléfono";
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new System.Drawing.Point(17, 312);
-            txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new System.Drawing.Size(420, 27);
-            txtTelefono.TabIndex = 6;
+            this.txtTelefono.Location = new System.Drawing.Point(17, 250);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(420, 22);
+            this.txtTelefono.TabIndex = 6;
             // 
-            // documento
+            // lbl_documento
             // 
-            documento.AutoSize = true;
-            documento.Location = new System.Drawing.Point(17, 212);
-            documento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            documento.Name = "documento";
-            documento.Size = new System.Drawing.Size(87, 20);
-            documento.TabIndex = 5;
-            documento.Text = "Documento";
+            this.lbl_documento.AutoSize = true;
+            this.lbl_documento.Location = new System.Drawing.Point(17, 170);
+            this.lbl_documento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_documento.Name = "lbl_documento";
+            this.lbl_documento.Size = new System.Drawing.Size(76, 16);
+            this.lbl_documento.TabIndex = 5;
+            this.lbl_documento.Text = "Documento";
             // 
             // txtDocumento
             // 
-            txtDocumento.Location = new System.Drawing.Point(17, 237);
-            txtDocumento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtDocumento.Name = "txtDocumento";
-            txtDocumento.Size = new System.Drawing.Size(420, 27);
-            txtDocumento.TabIndex = 4;
+            this.txtDocumento.Location = new System.Drawing.Point(17, 190);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(420, 22);
+            this.txtDocumento.TabIndex = 4;
             // 
-            // apellido
+            // lbl_apellido
             // 
-            apellido.AutoSize = true;
-            apellido.Location = new System.Drawing.Point(233, 137);
-            apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            apellido.Name = "apellido";
-            apellido.Size = new System.Drawing.Size(66, 20);
-            apellido.TabIndex = 3;
-            apellido.Text = "Apellido";
+            this.lbl_apellido.AutoSize = true;
+            this.lbl_apellido.Location = new System.Drawing.Point(233, 110);
+            this.lbl_apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_apellido.Name = "lbl_apellido";
+            this.lbl_apellido.Size = new System.Drawing.Size(57, 16);
+            this.lbl_apellido.TabIndex = 3;
+            this.lbl_apellido.Text = "Apellido";
             // 
             // txtApellido
             // 
-            txtApellido.Location = new System.Drawing.Point(233, 162);
-            txtApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new System.Drawing.Size(420, 27);
-            txtApellido.TabIndex = 2;
+            this.txtApellido.Location = new System.Drawing.Point(233, 130);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(420, 22);
+            this.txtApellido.TabIndex = 2;
             // 
-            // nombre
+            // lbl_nombre
             // 
-            nombre.AutoSize = true;
-            nombre.Location = new System.Drawing.Point(17, 137);
-            nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nombre.Name = "nombre";
-            nombre.Size = new System.Drawing.Size(64, 20);
-            nombre.TabIndex = 1;
-            nombre.Text = "Nombre";
+            this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.Location = new System.Drawing.Point(17, 110);
+            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(56, 16);
+            this.lbl_nombre.TabIndex = 1;
+            this.lbl_nombre.Text = "Nombre";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new System.Drawing.Point(17, 162);
-            txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new System.Drawing.Size(207, 27);
-            txtNombre.TabIndex = 0;
+            this.txtNombre.Location = new System.Drawing.Point(17, 130);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(207, 22);
+            this.txtNombre.TabIndex = 0;
             // 
             // Frm_Cliente
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1045, 709);
-            Controls.Add(datos_cliente);
-            Controls.Add(pnl_registros);
-            Controls.Add(pnl_opciones);
-            Controls.Add(gestion);
-            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            Name = "Frm_Cliente";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Gestión de Clientes";
-            gestion.ResumeLayout(false);
-            gestion.PerformLayout();
-            pnl_opciones.ResumeLayout(false);
-            pnl_registros.ResumeLayout(false);
-            pnl_registros.PerformLayout();
-            datos_cliente.ResumeLayout(false);
-            datos_cliente.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.Controls.Add(this.grp_datoscliente);
+            this.Controls.Add(this.pnl_registros);
+            this.Controls.Add(this.pnl_opciones);
+            this.Controls.Add(this.pnl_gestion);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Frm_Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Gestión de Clientes";
+            this.pnl_gestion.ResumeLayout(false);
+            this.pnl_gestion.PerformLayout();
+            this.pnl_opciones.ResumeLayout(false);
+            this.pnl_registros.ResumeLayout(false);
+            this.pnl_registros.PerformLayout();
+            this.grp_datoscliente.ResumeLayout(false);
+            this.grp_datoscliente.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel gestion;
+        private System.Windows.Forms.Panel pnl_gestion;
         private System.Windows.Forms.Label lblTotalRegistros;
-        private System.Windows.Forms.Label titulo;
+        private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.Panel pnl_opciones;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEliminar;
@@ -417,20 +418,20 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Label lblPosicion;
-        private System.Windows.Forms.GroupBox datos_cliente;
+        private System.Windows.Forms.GroupBox grp_datoscliente;
         private System.Windows.Forms.Label id_cliente;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label direccion;
+        private System.Windows.Forms.Label lbl_direccion;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label email;
+        private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label telefono;
+        private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label documento;
+        private System.Windows.Forms.Label lbl_documento;
         private System.Windows.Forms.TextBox txtDocumento;
-        private System.Windows.Forms.Label apellido;
+        private System.Windows.Forms.Label lbl_apellido;
         private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label nombre;
+        private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TextBox txtNombre;
     }
 }

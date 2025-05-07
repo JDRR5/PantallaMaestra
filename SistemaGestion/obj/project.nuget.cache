@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ceZsIGGyRD8=",
+  "dgSpecHash": "+lsAV4+piyI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\PantallaMaestra\\SistemaGestion\\SistemaGestion.csproj",
+  "projectFilePath": "C:\\Users\\usuario\\Downloads\\PantallaMaestra-master (1)\\PantallaMaestra-master\\SistemaGestion\\SistemaGestion.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\stub.system.data.sqlite.core.netframework\\1.0.118\\stub.system.data.sqlite.core.netframework.1.0.118.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512"
+    "C:\\Users\\usuario\\.nuget\\packages\\stub.system.data.sqlite.core.netframework\\1.0.118\\stub.system.data.sqlite.core.netframework.1.0.118.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512"
   ],
   "logs": []
 }

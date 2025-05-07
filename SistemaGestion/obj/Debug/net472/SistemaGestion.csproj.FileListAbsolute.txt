@@ -1,0 +1,16 @@
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\bin\Debug\net472\SistemaGestion.exe.config
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\bin\Debug\net472\SistemaGestion.exe
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\bin\Debug\net472\SistemaGestion.pdb
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\bin\Debug\net472\System.Data.SQLite.dll
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.csproj.AssemblyReference.cache
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.Frm_Cliente.resources
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.Frm_Principal.resources
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.Frm_Producto.resources
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.Frm_Registrarse.resources
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.Frm_Roles.resources
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.csproj.GenerateResource.cache
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaG.683A037C.Up2Date
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.exe
+C:\Users\usuario\Downloads\PantallaMaestra-master (1)\PantallaMaestra-master\SistemaGestion\obj\Debug\net472\SistemaGestion.pdb

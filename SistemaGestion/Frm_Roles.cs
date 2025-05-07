@@ -46,7 +46,7 @@ namespace SistemaGestion.Formularios
             btnEditar.UseVisualStyleBackColor = true; // Mismo estilo que los otros botones
             btnEditar.Click += BtnEditar_Click;
             btnEditar.Name = "btnEditar";
-            panel_guardar.Controls.Add(btnEditar);
+            pnl_guardar.Controls.Add(btnEditar);
 
             // Eventos de navegación
             btnPrimero.Click += BtnPrimero_Click;
@@ -71,7 +71,7 @@ namespace SistemaGestion.Formularios
                 _modoEdicion = false;
                 
                 // Asegurarse que el panel lateral sea visible
-                panel_guardar.Visible = true;
+                pnl_guardar.Visible = true;
                 
                 // Configurar la visibilidad inicial de los botones
                 btnGuardar.Visible = false;
@@ -80,7 +80,7 @@ namespace SistemaGestion.Formularios
                 btnCancelar.Enabled = false;
                 
                 // Obtener y configurar el botón Editar
-                Button btnEditar = panel_guardar.Controls["btnEditar"] as Button;
+                Button btnEditar = pnl_guardar.Controls["btnEditar"] as Button;
                 if (btnEditar != null)
                 {
                     btnEditar.Visible = true;
@@ -243,7 +243,7 @@ namespace SistemaGestion.Formularios
             try
             {
                 // Obtener referencia al botón Editar
-                Button btnEditar = panel_guardar.Controls["btnEditar"] as Button;
+                Button btnEditar = pnl_guardar.Controls["btnEditar"] as Button;
                 
                 // Configurar visibilidad de los botones según el modo
                 if (btnEditar != null)
@@ -253,7 +253,7 @@ namespace SistemaGestion.Formularios
                 }
 
                 // Siempre mantener el panel lateral visible
-                panel_guardar.Visible = true;
+                pnl_guardar.Visible = true;
                 
                 // Configurar los botones de guardar y cancelar
                 btnGuardar.Visible = habilitar; // Mostrar botón Guardar en modo edición

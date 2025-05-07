@@ -28,304 +28,305 @@ namespace SistemaGestion.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            gestion_roles = new System.Windows.Forms.Panel();
-            lblTotalRegistros = new System.Windows.Forms.Label();
-            lbl_titulo = new System.Windows.Forms.Label();
-            panel_guardar = new System.Windows.Forms.Panel();
-            btnCancelar = new System.Windows.Forms.Button();
-            btnGuardar = new System.Windows.Forms.Button();
-            pnl_registros = new System.Windows.Forms.Panel();
-            btnUltimo = new System.Windows.Forms.Button();
-            btnSiguiente = new System.Windows.Forms.Button();
-            btnAnterior = new System.Windows.Forms.Button();
-            btnPrimero = new System.Windows.Forms.Button();
-            lblPosicion = new System.Windows.Forms.Label();
-            asignacion_roles = new System.Windows.Forms.GroupBox();
-            lblInfoEdicion = new System.Windows.Forms.Label();
-            lblRolActual = new System.Windows.Forms.Label();
-            cmbRol = new System.Windows.Forms.ComboBox();
-            lbl_nuevor_rol = new System.Windows.Forms.Label();
-            txtUsuario = new System.Windows.Forms.TextBox();
-            lbl_usuario = new System.Windows.Forms.Label();
-            txtId = new System.Windows.Forms.TextBox();
-            lbl_id = new System.Windows.Forms.Label();
-            gestion_roles.SuspendLayout();
-            panel_guardar.SuspendLayout();
-            pnl_registros.SuspendLayout();
-            asignacion_roles.SuspendLayout();
-            SuspendLayout();
+            this.pnl_gestionRoles = new System.Windows.Forms.Panel();
+            this.lblTotalRegistros = new System.Windows.Forms.Label();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.pnl_guardar = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.pnl_registros = new System.Windows.Forms.Panel();
+            this.btnUltimo = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
+            this.btnPrimero = new System.Windows.Forms.Button();
+            this.lblPosicion = new System.Windows.Forms.Label();
+            this.grp_asignacionRoles = new System.Windows.Forms.GroupBox();
+            this.lblInfoEdicion = new System.Windows.Forms.Label();
+            this.lblRolActual = new System.Windows.Forms.Label();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.lbl_nuevoRol = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lbl_usuario = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.pnl_gestionRoles.SuspendLayout();
+            this.pnl_guardar.SuspendLayout();
+            this.pnl_registros.SuspendLayout();
+            this.grp_asignacionRoles.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // gestion_roles
+            // pnl_gestionRoles
             // 
-            gestion_roles.BackColor = System.Drawing.SystemColors.ControlLight;
-            gestion_roles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            gestion_roles.Controls.Add(lblTotalRegistros);
-            gestion_roles.Controls.Add(lbl_titulo);
-            gestion_roles.Dock = System.Windows.Forms.DockStyle.Top;
-            gestion_roles.Location = new System.Drawing.Point(0, 0);
-            gestion_roles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            gestion_roles.Name = "gestion_roles";
-            gestion_roles.Size = new System.Drawing.Size(912, 91);
-            gestion_roles.TabIndex = 0;
+            this.pnl_gestionRoles.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_gestionRoles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_gestionRoles.Controls.Add(this.lblTotalRegistros);
+            this.pnl_gestionRoles.Controls.Add(this.lbl_titulo);
+            this.pnl_gestionRoles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_gestionRoles.Location = new System.Drawing.Point(0, 0);
+            this.pnl_gestionRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_gestionRoles.Name = "pnl_gestionRoles";
+            this.pnl_gestionRoles.Size = new System.Drawing.Size(912, 73);
+            this.pnl_gestionRoles.TabIndex = 0;
             // 
             // lblTotalRegistros
             // 
-            lblTotalRegistros.AutoSize = true;
-            lblTotalRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lblTotalRegistros.Location = new System.Drawing.Point(17, 54);
-            lblTotalRegistros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblTotalRegistros.Name = "lblTotalRegistros";
-            lblTotalRegistros.Size = new System.Drawing.Size(136, 20);
-            lblTotalRegistros.TabIndex = 1;
-            lblTotalRegistros.Text = "Total: 0 registros";
+            this.lblTotalRegistros.AutoSize = true;
+            this.lblTotalRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalRegistros.Location = new System.Drawing.Point(17, 43);
+            this.lblTotalRegistros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalRegistros.Name = "lblTotalRegistros";
+            this.lblTotalRegistros.Size = new System.Drawing.Size(136, 20);
+            this.lblTotalRegistros.TabIndex = 1;
+            this.lblTotalRegistros.Text = "Total: 0 registros";
             // 
             // lbl_titulo
             // 
-            lbl_titulo.AutoSize = true;
-            lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lbl_titulo.Location = new System.Drawing.Point(16, 14);
-            lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lbl_titulo.Name = "lbl_titulo";
-            lbl_titulo.Size = new System.Drawing.Size(215, 29);
-            lbl_titulo.TabIndex = 0;
-            lbl_titulo.Text = "Gestión de Roles";
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.Location = new System.Drawing.Point(16, 11);
+            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(215, 29);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "Gestión de Roles";
             // 
-            // panel_guardar
+            // pnl_guardar
             // 
-            panel_guardar.BackColor = System.Drawing.SystemColors.Control;
-            panel_guardar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panel_guardar.Controls.Add(btnCancelar);
-            panel_guardar.Controls.Add(btnGuardar);
-            panel_guardar.Dock = System.Windows.Forms.DockStyle.Right;
-            panel_guardar.Location = new System.Drawing.Point(779, 91);
-            panel_guardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            panel_guardar.Name = "panel_guardar";
-            panel_guardar.Size = new System.Drawing.Size(133, 464);
-            panel_guardar.TabIndex = 1;
+            this.pnl_guardar.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_guardar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_guardar.Controls.Add(this.btnCancelar);
+            this.pnl_guardar.Controls.Add(this.btnGuardar);
+            this.pnl_guardar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_guardar.Location = new System.Drawing.Point(779, 73);
+            this.pnl_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_guardar.Name = "pnl_guardar";
+            this.pnl_guardar.Size = new System.Drawing.Size(133, 371);
+            this.pnl_guardar.TabIndex = 1;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new System.Drawing.Point(15, 78);
-            btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new System.Drawing.Size(100, 51);
-            btnCancelar.TabIndex = 3;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(15, 62);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 41);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new System.Drawing.Point(15, 18);
-            btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new System.Drawing.Size(100, 51);
-            btnGuardar.TabIndex = 1;
-            btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(15, 14);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 41);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // pnl_registros
             // 
-            pnl_registros.BackColor = System.Drawing.SystemColors.Control;
-            pnl_registros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            pnl_registros.Controls.Add(btnUltimo);
-            pnl_registros.Controls.Add(btnSiguiente);
-            pnl_registros.Controls.Add(btnAnterior);
-            pnl_registros.Controls.Add(btnPrimero);
-            pnl_registros.Controls.Add(lblPosicion);
-            pnl_registros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            pnl_registros.Location = new System.Drawing.Point(0, 482);
-            pnl_registros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            pnl_registros.Name = "pnl_registros";
-            pnl_registros.Size = new System.Drawing.Size(779, 73);
-            pnl_registros.TabIndex = 2;
+            this.pnl_registros.BackColor = System.Drawing.SystemColors.Control;
+            this.pnl_registros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_registros.Controls.Add(this.btnUltimo);
+            this.pnl_registros.Controls.Add(this.btnSiguiente);
+            this.pnl_registros.Controls.Add(this.btnAnterior);
+            this.pnl_registros.Controls.Add(this.btnPrimero);
+            this.pnl_registros.Controls.Add(this.lblPosicion);
+            this.pnl_registros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnl_registros.Location = new System.Drawing.Point(0, 385);
+            this.pnl_registros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_registros.Name = "pnl_registros";
+            this.pnl_registros.Size = new System.Drawing.Size(779, 59);
+            this.pnl_registros.TabIndex = 2;
             // 
             // btnUltimo
             // 
-            btnUltimo.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnUltimo.Location = new System.Drawing.Point(669, 15);
-            btnUltimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnUltimo.Name = "btnUltimo";
-            btnUltimo.Size = new System.Drawing.Size(80, 43);
-            btnUltimo.TabIndex = 4;
-            btnUltimo.Text = ">>";
-            btnUltimo.UseVisualStyleBackColor = true;
+            this.btnUltimo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUltimo.Location = new System.Drawing.Point(669, 12);
+            this.btnUltimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUltimo.Name = "btnUltimo";
+            this.btnUltimo.Size = new System.Drawing.Size(80, 34);
+            this.btnUltimo.TabIndex = 4;
+            this.btnUltimo.Text = ">>";
+            this.btnUltimo.UseVisualStyleBackColor = true;
             // 
             // btnSiguiente
             // 
-            btnSiguiente.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnSiguiente.Location = new System.Drawing.Point(581, 15);
-            btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnSiguiente.Name = "btnSiguiente";
-            btnSiguiente.Size = new System.Drawing.Size(80, 43);
-            btnSiguiente.TabIndex = 3;
-            btnSiguiente.Text = ">";
-            btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSiguiente.Location = new System.Drawing.Point(581, 12);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(80, 34);
+            this.btnSiguiente.TabIndex = 3;
+            this.btnSiguiente.Text = ">";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
             // 
             // btnAnterior
             // 
-            btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnAnterior.Location = new System.Drawing.Point(493, 15);
-            btnAnterior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnAnterior.Name = "btnAnterior";
-            btnAnterior.Size = new System.Drawing.Size(80, 43);
-            btnAnterior.TabIndex = 2;
-            btnAnterior.Text = "<";
-            btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnterior.Location = new System.Drawing.Point(493, 12);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(80, 34);
+            this.btnAnterior.TabIndex = 2;
+            this.btnAnterior.Text = "<";
+            this.btnAnterior.UseVisualStyleBackColor = true;
             // 
             // btnPrimero
             // 
-            btnPrimero.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            btnPrimero.Location = new System.Drawing.Point(405, 15);
-            btnPrimero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            btnPrimero.Name = "btnPrimero";
-            btnPrimero.Size = new System.Drawing.Size(80, 43);
-            btnPrimero.TabIndex = 1;
-            btnPrimero.Text = "<<";
-            btnPrimero.UseVisualStyleBackColor = true;
+            this.btnPrimero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrimero.Location = new System.Drawing.Point(405, 12);
+            this.btnPrimero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrimero.Name = "btnPrimero";
+            this.btnPrimero.Size = new System.Drawing.Size(80, 34);
+            this.btnPrimero.TabIndex = 1;
+            this.btnPrimero.Text = "<<";
+            this.btnPrimero.UseVisualStyleBackColor = true;
             // 
             // lblPosicion
             // 
-            lblPosicion.AutoSize = true;
-            lblPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lblPosicion.Location = new System.Drawing.Point(17, 25);
-            lblPosicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblPosicion.Name = "lblPosicion";
-            lblPosicion.Size = new System.Drawing.Size(108, 20);
-            lblPosicion.TabIndex = 0;
-            lblPosicion.Text = "Sin registros.";
+            this.lblPosicion.AutoSize = true;
+            this.lblPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.Location = new System.Drawing.Point(17, 20);
+            this.lblPosicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPosicion.Name = "lblPosicion";
+            this.lblPosicion.Size = new System.Drawing.Size(108, 20);
+            this.lblPosicion.TabIndex = 0;
+            this.lblPosicion.Text = "Sin registros.";
             // 
-            // asignacion_roles
+            // grp_asignacionRoles
             // 
-            asignacion_roles.Controls.Add(lblInfoEdicion);
-            asignacion_roles.Controls.Add(lblRolActual);
-            asignacion_roles.Controls.Add(cmbRol);
-            asignacion_roles.Controls.Add(lbl_nuevor_rol);
-            asignacion_roles.Controls.Add(txtUsuario);
-            asignacion_roles.Controls.Add(lbl_usuario);
-            asignacion_roles.Controls.Add(txtId);
-            asignacion_roles.Controls.Add(lbl_id);
-            asignacion_roles.Dock = System.Windows.Forms.DockStyle.Fill;
-            asignacion_roles.Location = new System.Drawing.Point(0, 91);
-            asignacion_roles.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            asignacion_roles.Name = "asignacion_roles";
-            asignacion_roles.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            asignacion_roles.Size = new System.Drawing.Size(779, 391);
-            asignacion_roles.TabIndex = 3;
-            asignacion_roles.TabStop = false;
-            asignacion_roles.Text = "Asignación de Roles";
+            this.grp_asignacionRoles.Controls.Add(this.lblInfoEdicion);
+            this.grp_asignacionRoles.Controls.Add(this.lblRolActual);
+            this.grp_asignacionRoles.Controls.Add(this.cmbRol);
+            this.grp_asignacionRoles.Controls.Add(this.lbl_nuevoRol);
+            this.grp_asignacionRoles.Controls.Add(this.txtUsuario);
+            this.grp_asignacionRoles.Controls.Add(this.lbl_usuario);
+            this.grp_asignacionRoles.Controls.Add(this.txtId);
+            this.grp_asignacionRoles.Controls.Add(this.lbl_id);
+            this.grp_asignacionRoles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grp_asignacionRoles.Location = new System.Drawing.Point(0, 73);
+            this.grp_asignacionRoles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grp_asignacionRoles.Name = "grp_asignacionRoles";
+            this.grp_asignacionRoles.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grp_asignacionRoles.Size = new System.Drawing.Size(779, 312);
+            this.grp_asignacionRoles.TabIndex = 3;
+            this.grp_asignacionRoles.TabStop = false;
+            this.grp_asignacionRoles.Text = "Asignación de Roles";
             // 
             // lblInfoEdicion
             // 
-            lblInfoEdicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            lblInfoEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            lblInfoEdicion.Location = new System.Drawing.Point(21, 275);
-            lblInfoEdicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblInfoEdicion.Name = "lblInfoEdicion";
-            lblInfoEdicion.Size = new System.Drawing.Size(727, 90);
-            lblInfoEdicion.TabIndex = 12;
-            lblInfoEdicion.Text = "Selecciona un nuevo rol y haz clic en Guardar para cambiar.";
-            lblInfoEdicion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInfoEdicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblInfoEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoEdicion.Location = new System.Drawing.Point(21, 220);
+            this.lblInfoEdicion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoEdicion.Name = "lblInfoEdicion";
+            this.lblInfoEdicion.Size = new System.Drawing.Size(727, 72);
+            this.lblInfoEdicion.TabIndex = 12;
+            this.lblInfoEdicion.Text = "Selecciona un nuevo rol y haz clic en Guardar para cambiar.";
+            this.lblInfoEdicion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRolActual
             // 
-            lblRolActual.AutoSize = true;
-            lblRolActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
-            lblRolActual.Location = new System.Drawing.Point(17, 174);
-            lblRolActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lblRolActual.Name = "lblRolActual";
-            lblRolActual.Size = new System.Drawing.Size(113, 20);
-            lblRolActual.TabIndex = 11;
-            lblRolActual.Text = "Rol actual: -";
+            this.lblRolActual.AutoSize = true;
+            this.lblRolActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRolActual.Location = new System.Drawing.Point(17, 139);
+            this.lblRolActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRolActual.Name = "lblRolActual";
+            this.lblRolActual.Size = new System.Drawing.Size(113, 20);
+            this.lblRolActual.TabIndex = 11;
+            this.lblRolActual.Text = "Rol actual: -";
             // 
             // cmbRol
             // 
-            cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cmbRol.FormattingEnabled = true;
-            cmbRol.Location = new System.Drawing.Point(21, 237);
-            cmbRol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            cmbRol.Name = "cmbRol";
-            cmbRol.Size = new System.Drawing.Size(420, 28);
-            cmbRol.TabIndex = 10;
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(21, 190);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(420, 24);
+            this.cmbRol.TabIndex = 10;
             // 
-            // lbl_nuevor_rol
+            // lbl_nuevoRol
             // 
-            lbl_nuevor_rol.AutoSize = true;
-            lbl_nuevor_rol.Location = new System.Drawing.Point(17, 212);
-            lbl_nuevor_rol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lbl_nuevor_rol.Name = "lbl_nuevor_rol";
-            lbl_nuevor_rol.Size = new System.Drawing.Size(81, 20);
-            lbl_nuevor_rol.TabIndex = 9;
-            lbl_nuevor_rol.Text = "Nuevo Rol:";
+            this.lbl_nuevoRol.AutoSize = true;
+            this.lbl_nuevoRol.Location = new System.Drawing.Point(17, 170);
+            this.lbl_nuevoRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_nuevoRol.Name = "lbl_nuevoRol";
+            this.lbl_nuevoRol.Size = new System.Drawing.Size(74, 16);
+            this.lbl_nuevoRol.TabIndex = 9;
+            this.lbl_nuevoRol.Text = "Nuevo Rol:";
             // 
             // txtUsuario
             // 
-            txtUsuario.Enabled = false;
-            txtUsuario.Location = new System.Drawing.Point(21, 135);
-            txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.ReadOnly = true;
-            txtUsuario.Size = new System.Drawing.Size(420, 27);
-            txtUsuario.TabIndex = 8;
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Location = new System.Drawing.Point(21, 108);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ReadOnly = true;
+            this.txtUsuario.Size = new System.Drawing.Size(420, 22);
+            this.txtUsuario.TabIndex = 8;
             // 
             // lbl_usuario
             // 
-            lbl_usuario.AutoSize = true;
-            lbl_usuario.Location = new System.Drawing.Point(17, 111);
-            lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new System.Drawing.Size(62, 20);
-            lbl_usuario.TabIndex = 7;
-            lbl_usuario.Text = "Usuario:";
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.Location = new System.Drawing.Point(17, 89);
+            this.lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(57, 16);
+            this.lbl_usuario.TabIndex = 7;
+            this.lbl_usuario.Text = "Usuario:";
             // 
             // txtId
             // 
-            txtId.Enabled = false;
-            txtId.Location = new System.Drawing.Point(21, 65);
-            txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            txtId.Name = "txtId";
-            txtId.ReadOnly = true;
-            txtId.Size = new System.Drawing.Size(132, 27);
-            txtId.TabIndex = 6;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(21, 52);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(132, 22);
+            this.txtId.TabIndex = 6;
             // 
             // lbl_id
             // 
-            lbl_id.AutoSize = true;
-            lbl_id.Location = new System.Drawing.Point(17, 40);
-            lbl_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            lbl_id.Name = "lbl_id";
-            lbl_id.Size = new System.Drawing.Size(22, 20);
-            lbl_id.TabIndex = 5;
-            lbl_id.Text = "Id";
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(17, 32);
+            this.lbl_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(18, 16);
+            this.lbl_id.TabIndex = 5;
+            this.lbl_id.Text = "Id";
             // 
             // Frm_Roles
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(912, 555);
-            Controls.Add(asignacion_roles);
-            Controls.Add(pnl_registros);
-            Controls.Add(panel_guardar);
-            Controls.Add(gestion_roles);
-            Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            Name = "Frm_Roles";
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Gestión de Roles";
-            gestion_roles.ResumeLayout(false);
-            gestion_roles.PerformLayout();
-            panel_guardar.ResumeLayout(false);
-            pnl_registros.ResumeLayout(false);
-            pnl_registros.PerformLayout();
-            asignacion_roles.ResumeLayout(false);
-            asignacion_roles.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(912, 444);
+            this.Controls.Add(this.grp_asignacionRoles);
+            this.Controls.Add(this.pnl_registros);
+            this.Controls.Add(this.pnl_guardar);
+            this.Controls.Add(this.pnl_gestionRoles);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Frm_Roles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Gestión de Roles";
+            this.pnl_gestionRoles.ResumeLayout(false);
+            this.pnl_gestionRoles.PerformLayout();
+            this.pnl_guardar.ResumeLayout(false);
+            this.pnl_registros.ResumeLayout(false);
+            this.pnl_registros.PerformLayout();
+            this.grp_asignacionRoles.ResumeLayout(false);
+            this.grp_asignacionRoles.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel gestion_roles;
+        private System.Windows.Forms.Panel pnl_gestionRoles;
         private System.Windows.Forms.Label lblTotalRegistros;
         private System.Windows.Forms.Label lbl_titulo;
-        private System.Windows.Forms.Panel panel_guardar;
+        private System.Windows.Forms.Panel pnl_guardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel pnl_registros;
@@ -334,11 +335,11 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Label lblPosicion;
-        private System.Windows.Forms.GroupBox asignacion_roles;
+        private System.Windows.Forms.GroupBox grp_asignacionRoles;
         private System.Windows.Forms.Label lblInfoEdicion;
         private System.Windows.Forms.Label lblRolActual;
         private System.Windows.Forms.ComboBox cmbRol;
-        private System.Windows.Forms.Label lbl_nuevor_rol;
+        private System.Windows.Forms.Label lbl_nuevoRol;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.TextBox txtId;
