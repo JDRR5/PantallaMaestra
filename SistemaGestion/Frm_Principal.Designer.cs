@@ -31,6 +31,7 @@ namespace SistemaGestion.Formularios
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnAbonos = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -49,6 +50,7 @@ namespace SistemaGestion.Formularios
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.Control;
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Controls.Add(this.btnExportar);
             this.pnlMenu.Controls.Add(this.btnRoles);
             this.pnlMenu.Controls.Add(this.btnAbonos);
             this.pnlMenu.Controls.Add(this.btnProductos);
@@ -78,7 +80,18 @@ namespace SistemaGestion.Formularios
             this.btnAbonos.TabIndex = 3;
             this.btnAbonos.Text = "Pagos / Abonos";
             this.btnAbonos.UseVisualStyleBackColor = true;
-            // 
+            //
+            // btnExportar
+            //
+            this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportar.Location = new System.Drawing.Point(12, 340);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(173, 50);
+            this.btnExportar.TabIndex = 4;
+            this.btnExportar.Text = "Exportar Información";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            //
             // btnProductos
             // 
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,5 +228,6 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Panel pnlDashboard;
         private System.Windows.Forms.Label lblInstrucciones;
         private System.Windows.Forms.Label lblTituloDashboard;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

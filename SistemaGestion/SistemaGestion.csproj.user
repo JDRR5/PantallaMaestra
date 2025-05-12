@@ -8,6 +8,9 @@
     <Compile Update="Frm_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Frm_Exportar_informacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>

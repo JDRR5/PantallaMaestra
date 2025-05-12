@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaGestion.Modelos;
 using SistemaGestion.Helpers;
+using System.IO;
 
 namespace SistemaGestion.Formularios
 {
@@ -168,5 +169,26 @@ namespace SistemaGestion.Formularios
             _animacionTimer?.Dispose();
             base.OnFormClosing(e);
         }
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Asume que la base de datos está en la carpeta de la aplicación
+                string dbPath = Path.Combine(Application.StartupPath, "sistema_gestion.db");
+
+                using (var frmExport = new Frm_Exportar_informacion(dbPath))
+                {
+                    frmExport.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al iniciar la exportación: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+            }
+        }
     }
 }
+
