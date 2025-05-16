@@ -44,6 +44,8 @@ namespace SistemaGestion.Formularios
             btnRoles.Click += BtnRoles_Click;
             btnAbonos.Click += BtnAbonos_Click;
             btnCerrarSesion.Click += BtnCerrarSesion_Click;
+            btnExportar.Click += btnExportar_Click;
+            btnImportar.Click += btnImportar_Click;
         }
 
         private void Frm_Principal_Load(object sender, EventArgs e)
@@ -189,6 +191,26 @@ namespace SistemaGestion.Formularios
                               MessageBoxIcon.Error);
             }
         }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Asume que la base de datos está en la carpeta de la aplicación
+                string dbPath = Path.Combine(Application.StartupPath, "sistema_gestion.db");
+
+                using (var frmImport = new Frm_Importar_Datos(dbPath))
+                {
+                    frmImport.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al iniciar la importación: {ex.Message}",
+                              "Error",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Error);
+            }
+        }
     }
 }
-

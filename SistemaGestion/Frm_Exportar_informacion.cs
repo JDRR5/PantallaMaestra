@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
@@ -108,18 +108,37 @@ namespace SistemaGestion.Formularios
                 var formato = (ExportadorSQLite.FormatoExportacion)cmbFormato.SelectedItem;
                 string query = $"SELECT * FROM {tabla}";
 
-                using (var saveDialog = new SaveFileDialog())
-                {
-                    saveDialog.Filter = ObtenerFiltroFormato(formato);
-                    saveDialog.FileName = $"{tabla}_export_{DateTime.Now:yyyyMMddHHmm}";
-                    saveDialog.OverwritePrompt = true;
+                // Verificar si ya existe un archivo guardado para esta sesión
+                string nombreArchivo = $"{tabla}_export_{DateTime.Now:yyyyMMddHHmm}";
+                string rutaCompleta = string.Empty;
 
-                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                // Solo mostrar el diálogo si no se ha guardado previamente
+                if (string.IsNullOrEmpty(rutaCompleta))
+                {
+                    using (var saveDialog = new SaveFileDialog())
                     {
-                        _exportador.ExportarDatos(query, saveDialog.FileName, formato);
-                        MessageBox.Show("Exportación completada con éxito", "Éxito",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        saveDialog.Filter = ObtenerFiltroFormato(formato);
+                        saveDialog.FileName = nombreArchivo;
+                        saveDialog.OverwritePrompt = true;
+
+                        if (saveDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            rutaCompleta = saveDialog.FileName;
+                        }
+                        else
+                        {
+                            // Usuario canceló la operación
+                            return;
+                        }
                     }
+                }
+
+                // Solo continuar si tenemos una ruta válida
+                if (!string.IsNullOrEmpty(rutaCompleta))
+                {
+                    _exportador.ExportarDatos(query, rutaCompleta, formato);
+                    MessageBox.Show("Exportación completada con éxito", "Éxito",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)

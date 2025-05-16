@@ -32,6 +32,7 @@ namespace SistemaGestion.Formularios
             this.btnRoles = new System.Windows.Forms.Button();
             this.btnAbonos = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
+            this.btnImportar = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -51,6 +52,7 @@ namespace SistemaGestion.Formularios
             this.pnlMenu.BackColor = System.Drawing.SystemColors.Control;
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMenu.Controls.Add(this.btnExportar);
+            this.pnlMenu.Controls.Add(this.btnImportar);
             this.pnlMenu.Controls.Add(this.btnRoles);
             this.pnlMenu.Controls.Add(this.btnAbonos);
             this.pnlMenu.Controls.Add(this.btnProductos);
@@ -92,6 +94,16 @@ namespace SistemaGestion.Formularios
             this.btnExportar.UseVisualStyleBackColor = true;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             //
+            // btnImportar
+            //
+            this.btnImportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportar.Location = new System.Drawing.Point(12, 410);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(173, 50);
+            this.btnImportar.TabIndex = 5;
+            this.btnImportar.Text = "Importar Datos";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            // 
             // btnProductos
             // 
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +231,8 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnRoles;
         private System.Windows.Forms.Button btnAbonos;
+        private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Button btnImportar;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Panel pnlHeader;
@@ -228,6 +242,5 @@ namespace SistemaGestion.Formularios
         private System.Windows.Forms.Panel pnlDashboard;
         private System.Windows.Forms.Label lblInstrucciones;
         private System.Windows.Forms.Label lblTituloDashboard;
-        private System.Windows.Forms.Button btnExportar;
     }
 }
